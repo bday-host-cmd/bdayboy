@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Manwin! 🎂</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background elements -->
+    <div class="background">
+        <div class="balloon balloon-1"></div>
+        <div class="balloon balloon-2"></div>
+        <div class="balloon balloon-3"></div>
+        <div class="balloon balloon-4"></div>
+        <div class="balloon balloon-5"></div>
+        <div class="stars"></div>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div id="countdown" class="countdown-container">
+        <h1>Get Ready for the Celebration!</h1>
+        <div class="countdown-timer">
+            <div class="countdown-number" id="countdown-number">3</div>
+        </div>
+        <p>Birthday cake cutting starts in...</p>
+    </div>
+
+    <!-- Main Game Container -->
+    <div id="gameContainer" class="game-container hidden">
+        <header>
+            <h1 class="title">🎉 Happy Birthday Manwin Youds Singh! 🎉</h1>
+            <p class="subtitle">Click and drag to cut your special birthday cake!</p>
+        </header>
+
+        <!-- Cake Container -->
+        <div class="cake-container">
+            <div id="cake" class="cake">
+                <!-- Candles -->
+                <div class="candles">
+                    <div class="candle candle-1">
+                        <div class="flame"></div>
+                        <div class="wick"></div>
+                    </div>
+                    <div class="candle candle-2">
+                        <div class="flame"></div>
+                        <div class="wick"></div>
+                    </div>
+                    <div class="candle candle-3">
+                        <div class="flame"></div>
+                        <div class="wick"></div>
+                    </div>
+                    <div class="candle candle-4">
+                        <div class="flame"></div>
+                        <div class="wick"></div>
+                    </div>
+                    <div class="candle candle-5">
+                        <div class="flame"></div>
+                        <div class="wick"></div>
+                    </div>
+                </div>
+                
+                <!-- Cake Layers -->
+                <div class="cake-layer layer-top">
+                    <div class="frosting"></div>
+                    <div class="decorations">
+                        <div class="cherry"></div>
+                        <div class="sprinkles"></div>
+                    </div>
+                </div>
+                <div class="cake-layer layer-middle">
+                    <div class="frosting"></div>
+                </div>
+                <div class="cake-layer layer-bottom">
+                    <div class="frosting"></div>
+                </div>
+                <div class="cake-base"></div>
+            </div>
+
+            <!-- Cut line indicator -->
+            <div id="cutLine" class="cut-line hidden"></div>
+        </div>
+
+        <!-- Happy Birthday Message -->
+        <div id="birthdayMessage" class="birthday-message hidden">
+            <h2>🎂 Happy Birthday! 🎂</h2>
+            <p>Make a wish and enjoy your special day!</p>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <p>💡 Click and drag across the cake to cut a slice!</p>
+        </div>
+    </div>
+
+    <!-- Envelope Container -->
+    <div id="envelopeContainer" class="envelope-container hidden">
+        <div class="envelope-wrapper">
+            <div id="envelope" class="envelope">
+                <div class="envelope-back"></div>
+                <div class="envelope-front"></div>
+                <div class="envelope-flap"></div>
+            </div>
+            <p class="envelope-instruction">Click the envelope to open your special message!</p>
+        </div>
+    </div>
+
+    <!-- Letter Popup Window -->
+    <div id="letterPopup" class="letter-popup hidden">
+        <div class="letter-overlay">
+            <div class="letter-window">
+                <div class="letter-header">
+                    <button class="close-letter" id="closeLetter">×</button>
+                </div>
+                <div class="letter-content">
+                    <div class="dog-doodles">
+                        <div class="dog-doodle doodle-1">🐕</div>
+                        <div class="dog-doodle doodle-2">🐶</div>
+                        <div class="dog-doodle doodle-3">🦴</div>
+                        <div class="dog-doodle doodle-4">🐾</div>
+                        <div class="dog-doodle doodle-5">🐕‍🦺</div>
+                        <div class="dog-doodle doodle-6">🎾</div>
+                        <div class="dog-doodle doodle-7">🐕</div>
+                        <div class="dog-doodle doodle-8">🐶</div>
+                    </div>
+                    <div class="letter-message">
+                        <h2>💕 WISHING YOU A VERY HAPPY BIRTHDAY MY LOVE 💕</h2>
+                        <p>May your special day be filled with joy, laughter, and all the wonderful things you deserve!</p>
+                        <div class="signature">With lots of love ❤️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confetti" class="confetti-container"></div>
+
+    <!-- Audio Elements -->
+    <audio id="cuttingSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LNeSMFl5PFvIKnKwbIzQA" type="audio/wav">
+    </audio>
+    <audio id="cheeringSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRv4CAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YdoCAAC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
